@@ -23,7 +23,7 @@ echo "    export CLUSTER="$CLUSTER
 echo "      - for cluster name, hostgroup, group = [a-z]([-a-z0-9]\*[a-z0-9])\? "
 read  -p "Press any key to continue " pressanycase
 echo ""
-echo "==> Clean environment"
+echo "==> Clean VM"
 echo "    uninstall OneAgent, ActiveGate, easytravel docker and previous k3s version"
 read  -p "Press any key to continue " pressanycase
 echo ""
