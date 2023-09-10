@@ -1,7 +1,7 @@
 # cloudNativeFullStack_deployment
 
 Prerequisiste:
-- linux VM (recommanded B8ms Azure) 8 CPU, 32 GB
+- linux VM minimu 4CPU 16 GB (Azure B4ms) - recommanded 8 CPU, 32 GB (B8ms Azure)
 - https://github.com/JLLormeau/lab-environment-for-dynatrace-training
 
 Variables:  
