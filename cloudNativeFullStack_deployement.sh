@@ -14,7 +14,7 @@ echo "==> export DT_API_TOKEN="$DT_API_TOKEN
 echo "    scope Operator_token + Data_ingest_token"
 echo "    more details here : https://www.dynatrace.com/support/help/setup-and-configuration/setup-on-k8s/installation/tokens-permissions"
 echo "==> export CLUSTRE="$PROJECT
-echo "    PROJECT : name of cluster, hostgroup, group must match the pattern [a-z]([-a-z0-9]*[a-z0-9])"
+echo "    PROJECT : name of cluster, hostgroup, group must match the pattern [a-z]([-a-z0-9]\*[a-z0-9])"
 read  -p "Press any key to continue " pressanycase
 
 echo "==> full clean process (uninstall OneAgent, ActiveGate, easytravel docker and previous k3s version)"
