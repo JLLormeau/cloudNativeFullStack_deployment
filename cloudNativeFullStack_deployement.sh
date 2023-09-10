@@ -16,9 +16,12 @@ echo "    VM recommanded 8 CPU + 32 GB (Azure B8MS)"
 read  -p "Press any key to continue " pressanycase
 echo ""
 echo "==> Setup the variables"  
-echo "    export DT_TENANT_URL="$DT_TENANT_URL"          https://abcd.live.dynatrace.com"
-echo "    export DT_API_TOKEN="`echo $DT_API_TOKEN| cut -d '.' -f 1,2`".xxxx            scope Operator_token + Data_ingest_token"
-echo "    export CLUSTRE="$PROJECT"                      for cluster name, hostgroup, group = [a-z]([-a-z0-9]\*[a-z0-9])\? "
+echo "    export DT_TENANT_URL="$DT_TENANT_URL"
+echo "      - https://abcd.live.dynatrace.com"
+echo "    export DT_API_TOKEN="`echo $DT_API_TOKEN| cut -d '.' -f 1,2`"..."			            
+echo "      - scope Operator_token + Data_ingest_token"
+echo "    export CLUSTER="$CLUSTER"
+echo "      - for cluster name, hostgroup, group = [a-z]([-a-z0-9]\*[a-z0-9])\? "
 read  -p "Press any key to continue " pressanycase
 echo ""
 echo "==> Clean environment"
@@ -41,13 +44,13 @@ echo "==> dynakuke fullstack generation"
 echo 'apiVersion: dynatrace.com/v1beta1
 kind: DynaKube
 metadata:
-  name: $PROJECT
+  name: $CLUSTER
   namespace: dynatrace
   annotations:
 spec:
   apiUrl: $DT_TENANT_URL/api
   tokens: "dynakube"
-  networkZone: $PROJECT
+  networkZone: $CLUSTER
   oneAgent:
     cloudNativeFullStack:
       tolerations:
@@ -56,7 +59,7 @@ spec:
         - effect: NoSchedule
           operator: Exists
       args:
-        - --set-host-group=$PROJECT
+        - --set-host-group=$CLUSTER
       env:
       - name: ONEAGENT_ENABLE_VOLUME_STORAGE
         value: "true"
@@ -66,7 +69,7 @@ spec:
       - kubernetes-monitoring
       - dynatrace-api
     image: ""
-    group: "$PROJECT"
+    group: "$CLUSTER"
     resources:
       requests:
         cpu: 500m
