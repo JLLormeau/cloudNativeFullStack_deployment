@@ -13,7 +13,7 @@ echo "==> export DT_API_TOKEN="$DT_API_TOKEN
 echo "==> export PROJECT="$PROJECT
 read  -p "Press any key to continue " pressanycase
 
-echo "==> full clean env (uninstall OA, uninstall AG, uninstall easytravel docker, uninstall previous k3s)"
+echo "==> full clean process (uninstall OneAgent, ActiveGate, easytravel docker and previous k3s version)"
 read  -p "Press any key to continue " pressanycase
 sudo /opt/dynatrace/oneagent/agent/uninstall.sh
 sudo /opt/dynatrace/gateway/uninstall.sh
