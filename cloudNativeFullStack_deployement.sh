@@ -5,7 +5,7 @@
 
 echo "==> install  easyTrade on K3S with cloud native operator"
 echo "==> VM minimum 4 CPU + 16 GB (Azure B4MS)" 
-echo "==> VM recommanded 8 CPU + 32 GB (Azure B48S), 
+echo "==> VM recommanded 8 CPU + 32 GB (Azure B48S)"
 read  -p "Press any key to continue " pressanycase
 
 echo "==> export DT_TENANT_URL="$DT_TENANT_URL
@@ -14,7 +14,7 @@ echo "==> export DT_API_TOKEN="$DT_API_TOKEN
 echo "    scope Operator_token + Data_ingest_token"
 echo "    more details here : https://www.dynatrace.com/support/help/setup-and-configuration/setup-on-k8s/installation/tokens-permissions"
 echo "==> export CLUSTRE="$PROJECT
-echo "    PROJECT : name of cluster, hostgroup, group must match the pattern "
+echo "    PROJECT : name of cluster, hostgroup, group must match the pattern [a-z]([-a-z0-9]*[a-z0-9])?"
 read  -p "Press any key to continue " pressanycase
 
 echo "==> full clean process (uninstall OneAgent, ActiveGate, easytravel docker and previous k3s version)"
