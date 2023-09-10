@@ -1,8 +1,8 @@
 # cloudNativeFullStack_deployment
 
 Prerequisiste:
-- linux VM minimu 4CPU 16 GB (Azure B4ms) - recommanded 8 CPU, 32 GB (B8ms Azure)
-- https://github.com/JLLormeau/lab-environment-for-dynatrace-training
+- linux VM recommanded 4CPU & 16GB (Azure B4ms)
+-  https://github.com/JLLormeau/lab-environment-for-dynatrace-training
 
 Variables:  
 - export DT_TENANT_URL="https://abcd.live.dynatrace.com"
