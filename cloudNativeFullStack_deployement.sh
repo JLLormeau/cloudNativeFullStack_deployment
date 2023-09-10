@@ -2,7 +2,7 @@
 #!/bin/bash
 #design by JLLormeau Dynatrace
 # version beta
-
+clear
 echo "==> Welcome to the script cloudNAtiveFullStack_deployment" 
 echo "    automatic installation of K3S" 
 echo "    automatic installation of dynatrace operator"
