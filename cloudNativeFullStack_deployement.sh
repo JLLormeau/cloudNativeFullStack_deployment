@@ -2,20 +2,20 @@
 #!/bin/bash
 #design by JLLormeau Dynatrace
 # version beta
-export PROJECT=k8slab
 
-. env.sh
 echo "==> install  easyTrade on K3S with cloud native operator"
 echo "==> export DT_TENANT_URL="$DT_TENANT_URL
 echo "==> export DT_API_TOKEN="$DT_API_TOKEN
 echo "==> export PROJECT="$PROJECT
 read  -p "Press any key to continue " pressanycase
 
-echo "==> clean env (OA, AG, easytravel docker)"
+echo "==> full clean env (uninstall OA, uninstall AG, uninstall easytravel docker, uninstall previous k3s)"
+read  -p "Press any key to continue " pressanycase
 sudo /opt/dynatrace/oneagent/agent/uninstall.sh
 sudo /opt/dynatrace/gateway/uninstall.sh
 /home/dynatracelab_easytraveld/start-stop-easytravel.sh stop
 sudo rm /etc/init.d/start-stop-easytravel.sh
+/usr/local/bin/k3s-uninstall.sh
 sleep 5
 
 echo "==> k3s installation"
@@ -107,7 +107,8 @@ sleep 5
 while [[ `kubectl get pods -n easytrade | grep frontend | grep "0/"` ]];do kubectl get pods -n easytrade;echo "==> waiting for frontend pod ready";sleep 3; done
 kubectl -n easytrade get svc
 
-#echo "==> restart easytrade"
-#kubectl delete --all pods -n easytrade 
+echo "==> need to restart easytrade?"
+read  -p "Press any key to continue " pressanycase
+kubectl delete --all pods -n easytrade 
 echo "==> enjoy"
 #end
