@@ -3,22 +3,30 @@
 #design by JLLormeau Dynatrace
 # version beta
 
-echo "==> install  easyTrade on K3S with cloud native operator"
-echo "==> VM minimum 4 CPU + 16 GB (Azure B4MS)" 
-echo "==> VM recommanded 8 CPU + 32 GB (Azure B48S)"
+echo "==> Welcome to the script cloudNAtiveFullStack_deployment" 
+echo "    automatic installation of K3S" 
+echo "    automatic installation of dynatrace operator"
+echo "    automatic installawith of easytrade"
+echo ""
+echo "==> Sizing"
+echo "    VM minimum 4 CPU + 16 GB (Azure B4MS)" 
+echo "    VM recommanded 8 CPU + 32 GB (Azure B48S)"
 read  -p "Press any key to continue " pressanycase
-
-echo "==> export DT_TENANT_URL="$DT_TENANT_URL
+echo ""
+echo "==> Setup the variables"  
+echo "export DT_TENANT_URL="$DT_TENANT_URL
 echo "    for instance : https://abcd.live.dynatrace.com"
-echo "==> export DT_API_TOKEN="$DT_API_TOKEN
+echo "export DT_API_TOKEN="$DT_API_TOKEN
 echo "    scope Operator_token + Data_ingest_token"
 echo "    more details here : https://www.dynatrace.com/support/help/setup-and-configuration/setup-on-k8s/installation/tokens-permissions"
-echo "==> export CLUSTRE="$PROJECT
-#echo "    PROJECT : name of cluster, hostgroup, group must match the pattern [a-z]([-a-z0-9]*[a-z0-9])? "
+echo "export CLUSTRE="$PROJECT
+echo "    PROJECT : name of cluster, hostgroup, group must match the pattern [a-z]([-a-z0-9]\*[a-z0-9])\? "
 read  -p "Press any key to continue " pressanycase
-
-echo "==> full clean process (uninstall OneAgent, ActiveGate, easytravel docker and previous k3s version)"
+echo ""
+echo "==> Clean environment"
+echo "    uninstall OneAgent, ActiveGate, easytravel docker and previous k3s version"
 read  -p "Press any key to continue " pressanycase
+echo ""
 sudo /opt/dynatrace/oneagent/agent/uninstall.sh
 sudo /opt/dynatrace/gateway/uninstall.sh
 /home/dynatracelab_easytraveld/start-stop-easytravel.sh stop
