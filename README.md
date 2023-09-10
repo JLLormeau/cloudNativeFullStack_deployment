@@ -22,3 +22,8 @@ Known limitation:
  - host k3s is not reconnized as a technologie = "Kubernetes" (softwaretechnologies(~"KUBERNETES~"))
  - impact : the Dashboards "Kubernetes cluster overview" is impacted on 5 tiles
  - workaround : clone the dashboard and use another filter on these tiles   
+
+Run: 
+
+    wget -O cloudNativeFullStack_deployement.sh https://raw.githubusercontent.com/JLLormeau/cloudNativeFullStack_deployment/main/cloudNativeFullStack_deployement.sh
+    bash cloudNativeFullStack_deployement.sh
