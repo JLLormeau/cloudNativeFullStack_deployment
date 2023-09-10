@@ -2,11 +2,12 @@
 
 Prerequisiste:
 - linux VM (recommanded B8ms Azure) 8 CPU, 32 GB
+- https://github.com/JLLormeau/lab-environment-for-dynatrace-training
 
 Variables:  
-export DT_TENANT_URL="https://abcd.live.dynatrace.com"  
-export DT_API_TOKEN="XXX"  
-export PROJECT=demolab  
+- export DT_TENANT_URL="https://abcd.live.dynatrace.com"
+- export DT_API_TOKEN="XXX"
+- export PROJECT=demolab
 
 Installation:
 - k3s version = 1.27 (traeffic disabled)
