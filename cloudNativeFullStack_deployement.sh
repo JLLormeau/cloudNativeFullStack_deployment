@@ -16,11 +16,11 @@ echo "    VM recommanded 8 CPU + 32 GB (Azure B8MS)"
 read  -p "Press any key to continue " pressanycase
 echo ""
 echo "==> Setup the variables"  
-echo "    export DT_TENANT_URL="$DT_TENANT_URL"
+echo "    export DT_TENANT_URL="$DT_TENANT_URL
 echo "      - https://abcd.live.dynatrace.com"
 echo "    export DT_API_TOKEN="`echo $DT_API_TOKEN| cut -d '.' -f 1,2`"..."			            
 echo "      - scope Operator_token + Data_ingest_token"
-echo "    export CLUSTER="$CLUSTER"
+echo "    export CLUSTER="$CLUSTER
 echo "      - for cluster name, hostgroup, group = [a-z]([-a-z0-9]\*[a-z0-9])\? "
 read  -p "Press any key to continue " pressanycase
 echo ""
