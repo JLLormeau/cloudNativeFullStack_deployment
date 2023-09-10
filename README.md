@@ -7,7 +7,7 @@ Prerequisiste:
 Variables:  
 - export DT_TENANT_URL="https://abcd.live.dynatrace.com"
 - export DT_API_TOKEN="XXX"
-- export PROJECT=demolab
+- export CLUSTER=k3slab
 
 Installation:
 - k3s version = 1.27 (traeffic disabled)
