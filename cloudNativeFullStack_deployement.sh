@@ -4,6 +4,10 @@
 # version beta
 
 echo "==> install  easyTrade on K3S with cloud native operator"
+echo "==> VM minimum 4 CPU + 16 GB (Azure B4MS)" 
+echo "==> VM recommanded 8 CPU + 32 GB (Azure B48S), 
+read  -p "Press any key to continue " pressanycase
+
 echo "==> export DT_TENANT_URL="$DT_TENANT_URL
 echo "==> export DT_API_TOKEN="$DT_API_TOKEN
 echo "==> export PROJECT="$PROJECT
