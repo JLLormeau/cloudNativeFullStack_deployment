@@ -10,7 +10,7 @@ echo "    automatic installawith of easytrade"
 echo ""
 echo "==> Sizing"
 echo "    VM minimum 4 CPU + 16 GB (Azure B4MS)" 
-echo "    VM recommanded 8 CPU + 32 GB (Azure B48S)"
+echo "    VM recommanded 8 CPU + 32 GB (Azure B8MS)"
 read  -p "Press any key to continue " pressanycase
 echo ""
 echo "==> Setup the variables"  
