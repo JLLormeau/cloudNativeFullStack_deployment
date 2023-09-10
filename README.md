@@ -18,12 +18,17 @@ Use case:
  - create a full environment Dynatrace + kubernetes ° easytradde on 5 minutes.
  - usefull for training
 
+Run: 
+
+    wget -O cloudNativeFullStack_deployement.sh https://raw.githubusercontent.com/JLLormeau/cloudNativeFullStack_deployment/main/cloudNativeFullStack_deployement.sh
+    bash cloudNativeFullStack_deployement.sh
+
+Additionnal configurations recommanded:  
+ - from the K8S settings view : enable monitor events, anomalie detection 
+ - follow the recommandation for easytrade https://github.com/Dynatrace/easytrade
+
 Known limitation:  
  - host k3s is not reconnized as a technologie = "Kubernetes" (softwaretechnologies(~"KUBERNETES~"))
  - impact : the Dashboards "Kubernetes cluster overview" is impacted on 5 tiles
  - workaround : clone the dashboard and use another filter on these tiles   
 
-Run: 
-
-    wget -O cloudNativeFullStack_deployement.sh https://raw.githubusercontent.com/JLLormeau/cloudNativeFullStack_deployment/main/cloudNativeFullStack_deployement.sh
-    bash cloudNativeFullStack_deployement.sh
