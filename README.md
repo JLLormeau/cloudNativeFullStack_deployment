@@ -27,8 +27,9 @@ Additionnal configurations recommanded:
  - from the K8S settings view : enable monitor events, anomalie detection 
  - follow the recommandation for easytrade https://github.com/Dynatrace/easytrade
 
-Known limitation:  
+Known limitations:  
  - host k3s is not reconnized as a technologie = "Kubernetes" (softwaretechnologies(~"KUBERNETES~"))
  - impact : the Dashboards "Kubernetes cluster overview" is impacted on 5 tiles
- - workaround : clone the dashboard and use another filter on these tiles   
+ - workaround : clone the dashboard and use another filter on these tiles
+ - at the beginning some standalone/paas hostid in are created, but once the installation is completed these hostid disappear
 
