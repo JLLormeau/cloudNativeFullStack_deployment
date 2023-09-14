@@ -14,7 +14,7 @@ Installation:
 - dynatrace operator with cloudNativeFullStack enabled (latest version)
 - easyTrade 
 
-Run: 
+=> run: 
 
     wget -O cloudNativeFullStack_deployement.sh https://raw.githubusercontent.com/JLLormeau/cloudNativeFullStack_deployment/main/cloudNativeFullStack_deployement.sh
     bash cloudNativeFullStack_deployement.sh
